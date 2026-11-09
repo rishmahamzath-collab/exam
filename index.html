@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container my-5 mt-5">
+        <h1 class="text-center text-primary fw-bolder">Contact Management App</h1>
+        <form id="userform">
+            <input type="text" id="editStatus" hidden>
+            <div class="row my-5">
+                <div class="col-2">
+                    <input id="userName" type="text" placeholder="Enter your Name">
+                </div>
+                <div class="col-2">
+                    <input id="userEmail" type="text" placeholder="Enter your Email">
+                </div>
+                <div class="col-2">
+                    <input id="userPhone" type="text" placeholder="Enter your Phone Number">
+                </div>
+                <div class="col-2">
+                    <button  class="btn btn-success w-100">Save</button>
+                </div>
+            </div>
+        </form>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-light text-center">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+               
+
+            </tbody>
+        </table>
+
+    </div>
+
+    
+</body>
+<script src="./main.js"></script>
+</html>

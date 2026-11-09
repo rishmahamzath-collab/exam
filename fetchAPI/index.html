@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap cdn link -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title></title>
+</head>
+<body>
+  <div class="container my-5 text-center">
+    <h1 class="text-primary">Random Users</h1>
+   <div class="my-4">
+   <img id="userimage" width="400" height="500"
+     class="rounded" style="object-fit: cover">
+   </div>
+   <button onclick="fetchuserData()" class="btn btn-primary">Get Radom Users</button>
+  </div>
+</body>
+<script>
+  async function fetchuserData(){
+    try {
+    const response = await fetch("https://randomuser.me/api/");
+    console.log(response);
+
+
+const imageUrl = user.picture.large;
+
+document.getElementById("userimage").src = imageUrl;
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+</script>
+</html>
